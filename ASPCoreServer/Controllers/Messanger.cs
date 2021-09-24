@@ -19,17 +19,14 @@ namespace ASPCoreServer.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            string outputString = "Not found!";
-
+            string OutputString = "Not found!";
             if ((id < ListOfMessages.Count) && (id >= 0))
             {
-                outputString = JsonConvert.SerializeObject(ListOfMessages[id]);
+                OutputString = JsonConvert.SerializeObject(ListOfMessages[id]);
             }
-            Console.WriteLine(String.Format("message # {0} : {1}", id, outputString));
-
-            return outputString;
+            Console.WriteLine(String.Format("Output message № {0} : {1}", id, OutputString));
+            return OutputString;
         }
-
         // POST api/<Messanger>
         [HttpPost]
         public IActionResult SendMessage([FromBody] Message msg)
@@ -39,8 +36,9 @@ namespace ASPCoreServer.Controllers
                 return BadRequest();
             }
             ListOfMessages.Add(msg);
-            Console.WriteLine(String.Format("Total messages: {0} Send messages: {1}", ListOfMessages.Count, msg));
+            Console.WriteLine(String.Format("Total messages: {0} Send message: {1}", ListOfMessages.Count, msg));
+            //return new NoContentResult();
             return new OkResult();
         }
-    }
+    }    
 }
