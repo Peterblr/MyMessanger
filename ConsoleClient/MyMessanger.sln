@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient.csproj", "{216FBB50-21FE-4E81-9468-CBFFA07909D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPCoreServer", "..\ASPCoreServer\ASPCoreServer.csproj", "{D80CD44D-12C6-4A94-A1C8-B1007D479B11}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "..\WindowsFormsClient\WindowsFormsClient.csproj", "{9BB0F237-3373-4448-BF39-05152D971999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPCoreServer", "..\ASPCoreServer\ASPCoreServer.csproj", "{D80CD44D-12C6-4A94-A1C8-B1007D479B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{D80CD44D-12C6-4A94-A1C8-B1007D479B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80CD44D-12C6-4A94-A1C8-B1007D479B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80CD44D-12C6-4A94-A1C8-B1007D479B11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BB0F237-3373-4448-BF39-05152D971999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BB0F237-3373-4448-BF39-05152D971999}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BB0F237-3373-4448-BF39-05152D971999}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BB0F237-3373-4448-BF39-05152D971999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
