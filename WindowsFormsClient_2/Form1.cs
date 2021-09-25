@@ -17,11 +17,13 @@ namespace WindowsFormsClient_2
         private static string UserName;
         private static MessangerClientAPI API = new MessangerClientAPI();
 
+        [Obsolete]
         public Form1()
         {
             InitializeComponent();
         }
 
+        [Obsolete]
         private void sendButton_Click(object sender, EventArgs e)
         {
             string UserName = UserNameTB.Text;
