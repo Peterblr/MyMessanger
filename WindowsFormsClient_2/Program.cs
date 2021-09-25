@@ -12,6 +12,7 @@ namespace WindowsFormsClient_2
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        [Obsolete]
         static void Main()
         {
             Application.EnableVisualStyles();

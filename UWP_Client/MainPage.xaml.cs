@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMessanger;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,47 @@ namespace UWP_Client
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private static int MessageID;
+        private static string UserName;
+        private static MessangerClientAPI API = new MessangerClientAPI();
+        DispatcherTimer timer;
+
         public MainPage()
         {
             this.InitializeComponent();
+            timer = new DispatcherTimer()
+            {
+                Interval = new TimeSpan(0, 0, 1)
+            };
+
+            timer.Tick += Timer_Tick;
+
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            Message msg = API.GetMessage(MessageID);
+
+            while (msg != null)
+            {
+                MessagesLB.Items.Add(msg);
+                MessageID++;
+                msg = API.GetMessage(MessageID);
+            }
+        }
+
+        [Obsolete]
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string UserName = UserNameTB.Text;
+            string Message = MessageTB.Text;
+
+            if ((UserName.Length > 1) && (Message.Length > 1))
+            {
+                Message msg = new MyMessanger.Message(UserName, Message, DateTime.Now);
+                API.SendMessageRestSharp(msg);
+            }
         }
     }
 }

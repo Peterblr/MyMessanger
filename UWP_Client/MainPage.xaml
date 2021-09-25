@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Button" Margin="1019,684,0,0" VerticalAlignment="Top" Height="65" Width="166"/>
+        <Button Content="Button" Margin="1019,684,0,0" VerticalAlignment="Top" Height="65" Width="166" Click="Button_Click"/>
         <ListBox x:Name="MessagesLB" Margin="0,0,232,500"/>
         <TextBox x:Name="UserNameTB" HorizontalAlignment="Left" Margin="70,569,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="833"/>
         <TextBox x:Name="MessageTB" HorizontalAlignment="Left" Margin="70,684,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="833"/>
