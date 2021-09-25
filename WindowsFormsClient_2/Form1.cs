@@ -27,10 +27,10 @@ namespace WindowsFormsClient_2
             string UserName = UserNameTB.Text;
             string Message = MessageTB.Text;
 
-            if ((UserName.Length > 1) && (UserName.Length > 1))
+            if ((UserName.Length > 1) && (Message.Length > 1))
             {
                 MyMessanger.Message msg = new MyMessanger.Message(UserName, Message, DateTime.Now);
-                API.SendMessage(msg);
+                API.SendMessageRestSharp(msg);
             }
         }
 
