@@ -1,4 +1,6 @@
 # MyMessanger
-Перейти на ветку new_branch
-Сразу запустить сервер из папки ASPCoreServer файлом ASPCoreServer.exe
-После запускаем клиент из папки WindowsFormsClient_2 файлом WindowsFormsClient_2.exe
+Go to branch "new_branch"
+
+Start server from folder "ASPCoreServer/" file "ASPCoreServer.exe"
+
+After we launch the client from the folder "WindowsFormsClient_2/" file "WindowsFormsClient_2.exe"
